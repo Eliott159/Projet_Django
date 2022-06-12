@@ -10,23 +10,33 @@
 		{% load static %}
 		<link rel= "stylesheet" href="{% static 'css/style.css' %}">
 	</head>
-	<body>
+	<style>
+		body{ text-align: center;}
+	</style>
+	<body style="text-align: center; background-color: #55b8ce;">
+
+		{% if error %}
+		<p><strong>Utilisateur inexistant ou mauvais de mot de passe.</strong></p>
+		{% endif %}
+
 		{% load static %}
 			<img src="{% static 'computerapp/images/logo2.png' %}" alt="logo" style="width:500px;height:300px;" id="img-rt">
 			
 		{% block sidebar %}
 			<h2>Authentification</h2>
-			<form>
+
+			
+			  <form>
 				<!-- Email input -->
 				<div class="form-outline mb-4">
+				  <label class="form-label" for="form2Example1">Email address :</label>
 				  <input type="email" id="form2Example1" class="form-control" />
-				  <label class="form-label" for="form2Example1">Email address</label>
 				</div>
 			  
 				<!-- Password input -->
 				<div class="form-outline mb-4">
+				  <label class="form-label" for="form2Example2">Password :</label>
 				  <input type="password" id="form2Example2" class="form-control" />
-				  <label class="form-label" for="form2Example2">Password</label>
 				</div>
 			  
 				<!-- 2 column grid layout for inline styling -->
@@ -46,7 +56,7 @@
 				</div>
 			  
 				<!-- Submit button -->
-				<button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+				<input type="submit" class="btn btn-primary btn-block mb-4" value="Sign in">
 			  
 				<!-- Register buttons -->
 				<div class="text-center">

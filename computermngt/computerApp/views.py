@@ -10,6 +10,12 @@ def index(request):
 
 	return render(request, 'index.html', context=context)
 
+def login(request):
+	machines = Machine.objects.order_by('-id')
+	context = {'machines': machines,}
+
+	return render(request, 'login.html', context=context)
+
 def machine_list_view(request) :
 	machines = Machine.objects.all()
 	context = {'machines':machines}

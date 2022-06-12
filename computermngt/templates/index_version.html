@@ -85,14 +85,14 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="{% url 'index' %}" class="nav-link active" aria-current="page">
+            <a href="index.html" class="nav-link active" aria-current="page">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="{% url 'index_version' %}" class="nav-link text-white">
-              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#autre"/></svg>
               Updates
             </a>
           </li>
@@ -101,7 +101,7 @@
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>mdo</strong>
+            <strong>User</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -113,7 +113,6 @@
       </div>
 
     {% endblock %}
-
 
 		{% block content %}
       <div class="container-fluid" style="text-align: center; padding-top: 20%; background-color: #55b8ce;">
@@ -131,26 +130,6 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>RGW-1</td>
-              <td>Routeur</td>
-              <td>gi0/1</td>
-              <td>192.168.1.254/24</td>
-              <td>Entreprise</td>
-              <td>1.0.2</td>
-              <td><button class="btn btn-primary" type="submit">retirer</button></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>SW-1</td>
-              <td>Commutateur</td>
-              <td>gi0/0/10</td>
-              <td>Rien</td>
-              <td>Entreprise</td>
-              <td>1.0.2</td>
-              <td><button class="btn btn-primary" type="submit">retirer</button></td>
-            </tr>
-            <tr>
               <th scope="row">3</th>
               <td>vpc-1</td>
               <td>PC</td>
@@ -162,7 +141,7 @@
             </tr>
           </tbody>
         </table>
-        <button class="btn btn-primary" type="submit">Ajouter</button> 
+        <button class="btn btn-primary" type="submit">Ajouter</button>
       </div>
 		{% endblock %}
 	</body>
